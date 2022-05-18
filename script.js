@@ -13,11 +13,12 @@ const mp550 = new Product("Mąka pszenna typ 550", 344, 10.5, 1.6, 73, 2.3);
 
 let product = [mp500, mp550];
 
-container = document.getElementById("container");
+container1 = document.getElementById("container1");
 
 let el = document.createElement("span");
 
 product.forEach(function (item) {
 
-  container.innerHTML += "produkt: " + item.name + "<br>";
+container1.innerHTML += "produkt: " + item.name + "<br>";
+container2
 });
