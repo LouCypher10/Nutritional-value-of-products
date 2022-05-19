@@ -21,7 +21,7 @@ const kakAlka = new Product("Kakao alkalizowane", 11, 7.43, 8.4, 0.42, 30.6, 0.1
 const lecytyna = new Product("Lecytyna sojowa", 92, 21, 6, 3, 0.05, 0.01);
 const mp = new Product("Mąka pszenna", 1.6, 0.32, 70.8, 0.5, 10.5, 0);
 const mz = new Product("Mąka żytnia", 1.7, 0.36, 71, 2.5, 5.9, 0.005);
-const arach = new Product("Mąka z orzechów arachidowych/orzechy arachidowe", 46.1, 6.1, 11.9, 6.2, 25.7, 0.04);
+const arach = new Product("Mąka z o. arach./orzechy arachidowe", 46.1, 6.1, 11.9, 6.2, 25.7, 0.04);
 const miazga = new Product("Miazga kakaowa", 53, 32.9, 7.6, 2.5, 12.2, 0.03);
 const sezam = new Product("Miazga sezamowa", 58.2, 9.5, 1.9, 1.7, 26.9, 0);
 const olej = new Product("Olej rzepakowy", 99.9, 6.7, 0, 0, 0, 0);
@@ -36,5 +36,5 @@ let el = document.createElement("span");
 
 products.forEach(function (item) {
 
-container1.innerHTML += "produkt: " + item.name + "<br>";
+container1.innerHTML += " - " + item.name + "<br>";
 });

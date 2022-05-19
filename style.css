@@ -1,8 +1,23 @@
 .box {
     font-size: 25px;
-    max-width: 30vw;
+    width: 30vw;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #container1 {
-    background-color: aqua;
+    background-color: rgb(213, 245, 245);
+}
+
+#container2 {
+    background-color: rgb(216, 184, 246);
+}
+
+#container3 {
+    background-color: rgb(163, 163, 240);
 }
