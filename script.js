@@ -30,11 +30,16 @@ const unigral = new Product("Tłuszcz'UNIGRAL'", 100, 56, 0, 0, 0, 0);
 
 let products = [serwatka, mleOdt, mlePel, kakao, blonnik, solis, olenex, cukier, kakAlka, lecytyna, mp, mz, arach, miazga, sezam, olej, gastrofryt, unigral];
 
-container1 = document.getElementById("container1");
+let lista = document.getElementById("lista");
+const li = document.createElement("li")
 
-let el = document.createElement("span");
+
+const txa = document.createElement('textarea');
+
 
 products.forEach(function (item) {
 
-container1.innerHTML += " - " + item.name + "<br>";
+lista.appendChild(li);
+lista.appendChild(txa);
+lista.innerHTML += " " + item.name + "<br>";
 });
