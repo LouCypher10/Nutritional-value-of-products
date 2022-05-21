@@ -21,3 +21,27 @@
 #container3 {
     background-color: rgb(163, 163, 240);
 }
+
+ul {
+    list-style: none;
+}
+
+#resoult {
+    font-size: 35px;
+    margin-left: 30%;
+}
+
+textarea {
+    max-height: 20px;
+    max-width: 100px;
+    font-size: 18px;
+}
+
+h2 {
+    margin-left: 25%;
+}
+
+p {
+    margin-left: 25%;
+    font-weight: 600;
+}
