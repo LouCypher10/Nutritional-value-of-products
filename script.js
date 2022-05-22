@@ -1,3 +1,4 @@
+//konstruktor produktu
 function Product(
   id,
   name,
@@ -19,9 +20,9 @@ function Product(
 }
 
 //Tworzenie nowych produktów = id,  nazwa, tłuszcz, nasycone kwasy tłuszczowe, węglowodany, cukry, białko, sól.
-const serwatka = new Product("a1", "Serwatka", 0.8, 0.5, 75, 75, 12, 0.9);
+const serwatka = new Product("a01", "Serwatka", 0.8, 0.5, 75, 75, 12, 0.9);
 const mleOdt = new Product(
-  "a2",
+  "a02",
   "Mleko odtłuszczone",
   0.8,
   0.5,
@@ -30,9 +31,9 @@ const mleOdt = new Product(
   35,
   1.8
 );
-const mlePel = new Product("a3", "Mleko pełne", 27, 17, 38, 38, 26, 1.4);
+const mlePel = new Product("a03", "Mleko pełne", 27, 17, 38, 38, 26, 1.4);
 const kakao = new Product(
-  "a4",
+  "a04",
   "Kakao naturalne",
   10.5,
   6.4,
@@ -41,9 +42,9 @@ const kakao = new Product(
   23.8,
   0.02
 );
-const blonnik = new Product("a5", "Błonnik kakaowy", 6, 0, 12.2, 0, 17, 0);
+const blonnik = new Product("a05", "Błonnik kakaowy", 6, 0, 12.2, 0, 17, 0);
 const solis = new Product(
-  "a6",
+  "a06",
   "Tłuszcz palmowy 'SOLIS'",
   99.7,
   59.8,
@@ -53,7 +54,7 @@ const solis = new Product(
   0
 );
 const olenex = new Product(
-  "a7",
+  "a07",
   "Tłuszcz do polew 'OLENEX'",
   100,
   72,
@@ -62,9 +63,9 @@ const olenex = new Product(
   0,
   0
 );
-const cukier = new Product("a8", "Cukier", 0, 0, 99.8, 99.8, 0, 0);
+const cukier = new Product("a08", "Cukier", 0, 0, 99.8, 99.8, 0, 0);
 const kakAlka = new Product(
-  "a9",
+  "a09",
   "Kakao alkalizowane",
   11,
   7.43,
@@ -154,7 +155,7 @@ const li = document.createElement("li");
 
 const txa = document.createElement("textarea");
 let txid = [];
-
+//Wyświetlanie listy składników i pole textarea
 products.forEach(function (item) {
   lista.appendChild(li);
   lista.appendChild(txa);
@@ -163,20 +164,40 @@ products.forEach(function (item) {
   lista.innerHTML += " " + item.name + "<br>";
 });
 
-let ingredients = [];
-let recipe = [];
+let ingredients = []; // tablica składników
+let values = []; // tablica wartości
 
 let textareaValue = document.querySelectorAll("textarea");
 
+//Wyświetlanie listy składników
+function usingIngrediets() {
+  const container2 = document.getElementById("container2");
+  for (let i = 0; i < ingredients.length; i++) {
+    const j = (ingredients[i].slice(0, 3));
+    const find = products.find(item => item.id === j);
+    console.log(values[i]);
+      container2.innerHTML += find.name + " - " + values[i] + " gram" + "<br>"
+  };
+  };
+
+//obliczanie wartości w 100 gramach produktu
+
+
+//Tworzenie tablic z użytymi składnikami i ich ilościami
 function makeRecipe() {
   txid.forEach(function (item) {
-    let x = document.getElementById(item);e
+    let x = document.getElementById(item);
     if (x.value.length) {
-      ingredients.push(x.id);}
+      ingredients.push(x.id);
+      values.push(x.value);
+    }
   })
+  usingIngrediets();
+  calculate();
   };
 
   console.log(ingredients);
+  console.log(values);
 
 const resoult = document.getElementById("resoult");
 resoult.onclick = makeRecipe;
