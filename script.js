@@ -199,7 +199,7 @@ function usingIngredients() {
   let newSugars = ((tishsugars / totalWeight) * 100);
   let newProteins = ((thisprotein / totalWeight) * 100);
   let newSalt = ((thissalt / totalWeight) * 100);
-  container2.innerHTML += "Całkowita masa produktu: " + totalWeight + " gram" + "<br>";
+  container2.innerHTML += "<br>" + "<b>" + "Całkowita masa produktu: " + totalWeight + " gram" + "</b>" + "<br>";
   container3.innerHTML += " Tłuszcz: " + newFat.toFixed(2) + " g/100g" + "<br>";
       container3.innerHTML += " W tym kwasy nasycone: " + newSatFattyAccids.toFixed(2) + " g/100g" + "<br>";
       container3.innerHTML += " Węglowodany: " + newCarbohydrate.toFixed(2) + " g/100g" + "<br>";
