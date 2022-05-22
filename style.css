@@ -16,6 +16,7 @@
 
 #container2 {
     background-color: rgb(216, 184, 246);
+    text-align: center;
 }
 
 #container3 {
@@ -39,10 +40,10 @@ textarea {
 }
 
 h2 {
-    margin-left: 25%;
+    margin-left: 5%;
 }
 
 p {
-    margin-left: 25%;
+    margin-left: 10%;
     font-weight: 600;
 }
