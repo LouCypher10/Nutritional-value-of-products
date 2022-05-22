@@ -1,55 +1,55 @@
 .box {
-    font-size: 25px;
-    width: 30vw;
-    height: 100vh;
-    border-radius: 5%;
-    margin: 8px;
-    -webkit-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
--moz-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
+  font-size: 25px;
+  width: 30vw;
+  height: 100vh;
+  border-radius: 5%;
+  margin: 8px;
+  -webkit-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
+  box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
 }
 
 .main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #container1 {
-    background-color: rgb(241, 188, 155);
+  background-color: rgb(241, 188, 155);
 }
 
 #container2 {
-    background-color: rgb(185, 232, 160);
-    text-align: center;
+  background-color: rgb(185, 232, 160);
+  text-align: center;
 }
 
 #container3 {
-    background-color: rgb(180, 190, 239);
-    padding-left: 5%;
+  background-color: rgb(180, 190, 239);
+  padding-left: 5%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 #resoult {
-    font-size: 35px;
-    margin-left: 30%;
+  font-size: 35px;
+  margin-left: 30%;
 }
 
 textarea {
-    max-height: 20px;
-    max-width: 100px;
-    font-size: 18px;
-    border-radius: 7px;
+  max-height: 20px;
+  max-width: 100px;
+  font-size: 18px;
+  border-radius: 7px;
 }
 
 h2 {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 p {
-    margin-left: 10%;
-    font-weight: 600;
+  margin-left: 10%;
+  font-weight: 600;
 }
