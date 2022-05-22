@@ -171,16 +171,42 @@ let textareaValue = document.querySelectorAll("textarea");
 
 //Wyświetlanie listy składników
 function usingIngredients() {
+  const container3 = document.getElementById("container3");
   const container2 = document.getElementById("container2");
+  let totalWeight = 0;
+  let thisfat = 0;
+  let thisSatFattyAcids = 0;
+  let thiscarbohydrate = 0;
+  let tishsugars = 0;
+  let thisprotein = 0;
+  let thissalt = 0;
+  for (let i = 0; i < ingredients.length; i++) {
+    totalWeight = totalWeight  + values[i];}
   for (let i = 0; i < ingredients.length; i++) {
     const j = (ingredients[i].slice(0, 3));
     const find = products.find(item => item.id === j);
-    console.log(values[i]);
-      container2.innerHTML += find.name + " - " + values[i] + " gram" + "<br>"
+      container2.innerHTML += find.name + " - " + values[i] + " gram" + "<br>";
+     thisfat = thisfat + ((find.fat / 100) * values[i]);
+     thisSatFattyAcids = thisSatFattyAcids + ((find.satFattyAcids / 100) * values[i]);
+     thiscarbohydrate = thiscarbohydrate + ((find.carbohydrate / 100) * values[i]);
+     tishsugars = tishsugars + ((find.sugars / 100) * values[i]);
+     thisprotein = thisprotein + ((find.protein / 100) * values[i]);
+     thissalt = thissalt + ((find.salt / 100) * values[i]);
   };
+  let newFat = ((thisfat / totalWeight) * 100);
+  let newSatFattyAccids = ((thisSatFattyAcids / totalWeight) * 100);
+  let newCarbohydrate = ((thiscarbohydrate / totalWeight) * 100);
+  let newSugars = ((tishsugars / totalWeight) * 100);
+  let newProteins = ((thisprotein / totalWeight) * 100);
+  let newSalt = ((thissalt / totalWeight) * 100);
+  container2.innerHTML += "Całkowita masa produktu: " + totalWeight + " gram" + "<br>";
+  container3.innerHTML += " Tłuszcz: " + newFat.toFixed(2) + " g/100g" + "<br>";
+      container3.innerHTML += " W tym kwasy nasycone: " + newSatFattyAccids.toFixed(2) + " g/100g" + "<br>";
+      container3.innerHTML += " Węglowodany: " + newCarbohydrate.toFixed(2) + " g/100g" + "<br>";
+      container3.innerHTML += " W tym cukry: " + newSugars.toFixed(2) + " g/100g" + "<br>";
+      container3.innerHTML += " Białko: " + newProteins.toFixed(2) + " g/100g" + "<br>";
+      container3.innerHTML += " Sól: " + newSalt.toFixed(2) + " g/100g" + "<br>";
   };
-
-//obliczanie wartości w 100 gramach
 
 
 //Tworzenie tablic z użytymi składnikami i ich ilościami
@@ -189,11 +215,10 @@ function makeRecipe() {
     let x = document.getElementById(item);
     if (x.value.length) {
       ingredients.push(x.id);
-      values.push(x.value);
+      values.push(parseInt(x.value));
     }
   })
   usingIngredients();
-  calculate();
   };
 
   console.log(ingredients);
