@@ -221,8 +221,5 @@ function makeRecipe() {
   usingIngredients();
   };
 
-  console.log(ingredients);
-  console.log(values);
-
 const resoult = document.getElementById("resoult");
 resoult.onclick = makeRecipe;
