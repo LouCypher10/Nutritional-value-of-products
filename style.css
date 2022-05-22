@@ -2,6 +2,11 @@
     font-size: 25px;
     width: 30vw;
     height: 100vh;
+    border-radius: 5%;
+    margin: 8px;
+    -webkit-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
+box-shadow: 10px -4px 20px 0px rgba(66, 68, 90, 1);
 }
 
 .main {
@@ -11,16 +16,17 @@
 }
 
 #container1 {
-    background-color: rgb(213, 245, 245);
+    background-color: rgb(241, 188, 155);
 }
 
 #container2 {
-    background-color: rgb(216, 184, 246);
+    background-color: rgb(185, 232, 160);
     text-align: center;
 }
 
 #container3 {
-    background-color: rgb(163, 163, 240);
+    background-color: rgb(180, 190, 239);
+    padding-left: 5%;
 }
 
 ul {
