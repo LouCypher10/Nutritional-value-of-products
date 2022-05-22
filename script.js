@@ -170,7 +170,7 @@ let values = []; // tablica wartości
 let textareaValue = document.querySelectorAll("textarea");
 
 //Wyświetlanie listy składników
-function usingIngrediets() {
+function usingIngredients() {
   const container2 = document.getElementById("container2");
   for (let i = 0; i < ingredients.length; i++) {
     const j = (ingredients[i].slice(0, 3));
@@ -180,7 +180,7 @@ function usingIngrediets() {
   };
   };
 
-//obliczanie wartości w 100 gramach produktu
+//obliczanie wartości w 100 gramach
 
 
 //Tworzenie tablic z użytymi składnikami i ich ilościami
@@ -192,7 +192,7 @@ function makeRecipe() {
       values.push(x.value);
     }
   })
-  usingIngrediets();
+  usingIngredients();
   calculate();
   };
 
